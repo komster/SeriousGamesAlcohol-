@@ -24,9 +24,9 @@ namespace Prototyp
         public Form1()
         {
             InitializeComponent();
-            levelList.Add(new Level1());
-            levelList.Add(new Level2());
-            levelList.Add(new Level3());
+            levelList.Add(new Level1DrinkWalk());
+            levelList.Add(new Level2DrinkWalk());
+            levelList.Add(new Level3DrinkWalk());
             NextLevel();
             button1.Hide();
         }
@@ -41,7 +41,6 @@ namespace Prototyp
             }
             else
             {
-                //////
                 state = State.dead;
             }
         }

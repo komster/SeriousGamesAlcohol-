@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Prototyp
 {
-    class Level2 : Level
+    class Level2DrinkWalk : Level
     {
 
 

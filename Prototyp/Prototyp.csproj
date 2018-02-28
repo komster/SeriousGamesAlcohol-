@@ -55,9 +55,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Level.cs" />
-    <Compile Include="Level1.cs" />
-    <Compile Include="Level2.cs" />
-    <Compile Include="Level3.cs" />
+    <Compile Include="Level1DrinkWalk.cs" />
+    <Compile Include="Level2DrinkWalk.cs" />
+    <Compile Include="Level3DrinkWalk.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

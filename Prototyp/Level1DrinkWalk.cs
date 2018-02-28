@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Prototyp
 {
-    class Level1 : Level
+    class Level1DrinkWalk : Level
     {
         private List<Entity> entitys = new List<Entity>();
         private Entity table;
