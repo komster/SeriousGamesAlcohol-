@@ -24,9 +24,10 @@ namespace Prototyp
         public Form1()
         {
             InitializeComponent();
-            levelList.Add(new Level1());
-            levelList.Add(new Level2());
-            levelList.Add(new Level3());
+            
+            levelList.Add(new Level1DrinkWalk());
+            levelList.Add(new Level2DrinkWalk());
+            levelList.Add(new Level3DrinkWalk());
             levelList.Add(new Level1Car());
             NextLevel();
             button1.Hide();
@@ -42,7 +43,6 @@ namespace Prototyp
             }
             else
             {
-                //////
                 state = State.dead;
             }
         }
@@ -70,7 +70,7 @@ namespace Prototyp
                 List<Entity> entitys = level.GetEntityList();
                 for (int index = 0; index < entitys.Count; index++)
                 {
-                    formGraphics.FillRectangle(entitys[index].GetBrush(), entitys[index].GetRecF());
+                    formGraphics.DrawImage(entitys[index].getImage(), entitys[index].GetRecF());
                 }
                 Entity table = level.GetTable();
                 formGraphics.FillRectangle(table.GetBrush(), table.GetRecF());

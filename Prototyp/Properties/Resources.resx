@@ -118,13 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bardesk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\bardesk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beertopview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\beertopview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\picturs\Dead.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="drinking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\picturs\drinking.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+<<<<<<< HEAD
   <data name="Road" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tetris_Tile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+=======
+  <data name="floor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\floor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="table4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\table4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tablecombo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\tablecombo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tablecombo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\tablecombo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tablecombo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\tablecombo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+>>>>>>> 95a80907f70431ce9362deea3c07bfb996abbe8f
   </data>
 </root>
