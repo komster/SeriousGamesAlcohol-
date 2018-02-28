@@ -103,11 +103,6 @@ namespace Prototyp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
-        internal static System.Drawing.Bitmap Road {
-            get {
-                object obj = ResourceManager.GetObject("Road", resourceCulture);
-=======
         internal static System.Drawing.Bitmap floor {
             get {
                 object obj = ResourceManager.GetObject("floor", resourceCulture);
@@ -151,7 +146,6 @@ namespace Prototyp.Properties {
         internal static System.Drawing.Bitmap tablecombo3 {
             get {
                 object obj = ResourceManager.GetObject("tablecombo3", resourceCulture);
->>>>>>> 95a80907f70431ce9362deea3c07bfb996abbe8f
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

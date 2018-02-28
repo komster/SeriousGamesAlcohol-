@@ -99,7 +99,6 @@
     <None Include="picturs\Dead.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Road.png" />
     <None Include="picturs\beertopview.png" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="picturs\table4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
