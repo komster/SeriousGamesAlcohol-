@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Entities\CarLvlBackground.cs" />
     <Compile Include="Entities\Drink.cs" />
-    <Compile Include="Entity.cs" />
+    <Compile Include="Entities\Entity.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

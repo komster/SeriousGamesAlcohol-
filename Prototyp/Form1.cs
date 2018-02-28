@@ -18,7 +18,7 @@ namespace Prototyp
         Graphics formGraphics;
         State state = State.levelGoing;
         List<Level> levelList = new List<Level>();
-        int levelIndex = 3;
+        int levelIndex = 0;
         Level level;
 
         public Form1()
@@ -65,17 +65,17 @@ namespace Prototyp
             {
                 formGraphics.Clear(Color.Black);
             }
-            if (state == State.levelGoing)
+            if (state == State.levelDrinkWalk)
             {
                 List<Entity> entitys = level.GetEntityList();
                 for (int index = 0; index < entitys.Count; index++)
                 {
-                    formGraphics.DrawImage(entitys[index].getImage(), entitys[index].GetRecF());
+                    formGraphics.DrawImage(entitys[index].GetImage(), entitys[index].GetRecF());
                 }
                 Entity table = level.GetTable();
-                formGraphics.FillRectangle(table.GetBrush(), table.GetRecF());
+                formGraphics.DrawImage(table.GetImage(), table.GetRecF());
                 Entity drink = level.GetDrink();
-                formGraphics.FillRectangle(drink.GetBrush(), drink.GetRecF());
+                formGraphics.DrawImage(drink.GetImage(), drink.GetRecF());
             }
 
             base.OnPaint(e);

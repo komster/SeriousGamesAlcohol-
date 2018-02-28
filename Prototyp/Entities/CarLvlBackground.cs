@@ -23,7 +23,7 @@ namespace Prototyp.Entities
 
         public CarLvlBackground(int SizeX, int SizeY)
         {
-            Img = Properties.Resources.Road;
+            //Img = Properties.Resources.Road;
 
             PosX = SizeX / 2;
             PosY = SizeY / 2;
