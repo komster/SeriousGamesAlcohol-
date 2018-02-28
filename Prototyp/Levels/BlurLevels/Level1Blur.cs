@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace Prototyp
+/*namespace Prototyp
 {
 
     //DELETE
@@ -94,3 +94,4 @@ namespace Prototyp
         }
     }
 }
+*/
