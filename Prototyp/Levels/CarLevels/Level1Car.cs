@@ -10,7 +10,7 @@ namespace Prototyp
     {
         private List<Entity> entitys = new List<Entity>();
 
-        private State state = State.levelGoing;
+        private State state = State.levelCar;
 
         private float ScreenWidth;
         private float ScreenHeight;

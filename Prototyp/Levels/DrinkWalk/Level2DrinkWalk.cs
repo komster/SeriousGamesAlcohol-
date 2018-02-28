@@ -25,7 +25,7 @@ namespace Prototyp
         private Vector2 wingleDirection;
 
         private bool drinkPicktUp = false;
-        private State state = State.levelGoing;
+        private State state = State.levelDrinkWalk;
 
         private int wingle = 0;
         private bool wingleUp = true;

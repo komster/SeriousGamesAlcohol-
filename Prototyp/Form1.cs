@@ -16,9 +16,9 @@ namespace Prototyp
     {
         Bitmap drawImage;
         Graphics formGraphics;
-        State state = State.levelGoing;
+        State state = State.levelCar;
         List<Level> levelList = new List<Level>();
-        int levelIndex = 0;
+        int levelIndex = 3;
         Level level;
 
         public Form1()

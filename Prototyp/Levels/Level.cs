@@ -20,7 +20,7 @@ namespace Prototyp
 
         public virtual State Update()
         {
-            return State.levelGoing;
+            return State.levelDone;
         }
 
         public virtual List<Entity> GetEntityList()

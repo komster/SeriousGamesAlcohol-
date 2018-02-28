@@ -47,7 +47,7 @@ namespace Prototyp.Entities
             return recF;
         }
 
-        public override Image getImage()
+        public override Image GetImage()
         {
             return Img;
         }
