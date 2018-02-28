@@ -41,6 +41,7 @@ namespace Prototyp
             }
             else
             {
+                //////
                 state = State.dead;
             }
         }
