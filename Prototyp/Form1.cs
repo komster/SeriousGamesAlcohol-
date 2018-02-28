@@ -38,7 +38,7 @@ namespace Prototyp
             if (levelIndex < levelList.Count)
             {
                 level = levelList[levelIndex];
-                level.CreateLevel();
+                level.CreateLevel(pictureBox1.Width, pictureBox1.Height);
                 timer1.Start();
             }
             else
@@ -72,10 +72,10 @@ namespace Prototyp
                 {
                     formGraphics.DrawImage(entitys[index].getImage(), entitys[index].GetRecF());
                 }
-                Entity table = level.GetTable();
-                formGraphics.FillRectangle(table.GetBrush(), table.GetRecF());
-                Entity drink = level.GetDrink();
-                formGraphics.FillRectangle(drink.GetBrush(), drink.GetRecF());
+                //Entity table = level.GetTable();
+                //formGraphics.FillRectangle(table.GetBrush(), table.GetRecF());
+                //Entity drink = level.GetDrink();
+                //formGraphics.FillRectangle(drink.GetBrush(), drink.GetRecF());
             }
 
             base.OnPaint(e);

@@ -13,7 +13,7 @@ namespace Prototyp
 
         private RectangleF recF;
         private SolidBrush brush;
-        private Image image
+        private Image image;
 
         public Table(SolidBrush solidBrush, float posX, float posY, float size)
         {
@@ -24,9 +24,10 @@ namespace Prototyp
         {
             return recF;
         }
-        public override SolidBrush GetBrush()
+
+        public override Image getImage()
         {
-            return brush;
+            return base.getImage();
         }
     }
 }

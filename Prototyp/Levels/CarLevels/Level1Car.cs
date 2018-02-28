@@ -9,19 +9,18 @@ namespace Prototyp
     class Level1Car : Level
     {
         private List<Entity> entitys = new List<Entity>();
-        private HashSet<Entities.CarLvlBackground> CBGSet = new HashSet<Entities.CarLvlBackground>();
 
         private State state = State.levelGoing;
 
-        private int ScreenWidth;
-        private int ScreenHeight;
+        private float ScreenWidth;
+        private float ScreenHeight;
 
         public override void CreateLevel(int ScreenW, int ScreenH)
         {
             ScreenWidth = ScreenW;
             ScreenHeight = ScreenH;
 
-            CBGSet.Add(new Entities.CarLvlBackground(ScreenWidth, ScreenHeight));
+            entitys.Add(new Entities.CarLvlBackground(ScreenWidth, ScreenHeight));
 
         }
 
@@ -38,11 +37,12 @@ namespace Prototyp
 
         private void ScrollingBG()
         {
-            foreach (Entities.CarLvlBackground BG in CBGSet)
+            foreach (Entities.CarLvlBackground BG in entitys)
             {
-                BG.Move(0.1f, 0.0f);
-                if(BG.getPosX() < -0.1f) { CBGSet.Add(new Entities.CarLvlBackground(ScreenWidth, ScreenHeight)); }
-                else if(BG.getPosX() > ScreenWidth) { CBGSet.Remove(BG); }
+                BG.setPosX(1f);
+                BG.Update();
+                if(BG.getPosX() > -0.1f && BG.getPosX() < 1f) { entitys.Add(new Entities.CarLvlBackground(ScreenWidth, ScreenHeight)); }
+                else if(BG.getPosX() > ScreenWidth) { entitys.Remove(BG); }
             }
         }
     }

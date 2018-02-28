@@ -10,39 +10,55 @@ namespace Prototyp.Entities
     class CarLvlBackground : Entity
     {
 
-        private SolidBrush brush;
-
         private Image Img;
 
         private RectangleF recF;
 
-        private int PosX;
-        private int PosY;
-        private int SX;
-        private int SY;
+        private float PosX;
+        private float PosY;
+        private float SX;
+        private float SY;
 
-        public CarLvlBackground(int SizeX, int SizeY)
+        public CarLvlBackground(float SizeX, float SizeY)
         {
             Img = Properties.Resources.Road;
 
-            PosX = SizeX / 2;
-            PosY = SizeY / 2;
+            PosX = 0;
+            PosY = 0;
+            SX = SizeX;
+            SY = SizeY;
 
-            recF = new RectangleF(PosX, PosY, SizeX, SizeY);
+            createNew();
+
+        }
+
+        private void createNew()
+        {
+            recF = new RectangleF(PosX, PosY, SX, SY);
+        }
+
+        public void Update()
+        {
+            recF.X = PosX;
         }
 
         public override RectangleF GetRecF()
         {
             return recF;
         }
-        public override SolidBrush GetBrush()
+
+        public override Image getImage()
         {
-            return brush;
+            return Img;
         }
 
-        public int getPosX()
+        public float getPosX()
         {
             return PosX;
+        }
+        public void setPosX(float value)
+        {
+            PosX = PosX + value;
         }
 
     }

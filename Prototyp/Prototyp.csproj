@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Entities\CarLvlBackground.cs" />
     <Compile Include="Entities\Drink.cs" />
-    <Compile Include="Entity.cs" />
+    <Compile Include="Entities\Entity.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\Road.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
