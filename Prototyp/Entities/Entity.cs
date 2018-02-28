@@ -26,7 +26,7 @@ namespace Prototyp
         {
 
         }
-        public virtual Image getImage()
+        public virtual Image GetImage()
         {
             return null;
         }

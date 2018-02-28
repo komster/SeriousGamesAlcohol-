@@ -17,3 +17,13 @@ C:\Users\leona\Documents\GitHub\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp
 C:\Users\leona\Documents\GitHub\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.Form1.resources
 C:\Users\leona\Documents\GitHub\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.Properties.Resources.resources
 C:\Users\leona\Documents\GitHub\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.csproj.GenerateResource.Cache
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.csprojResolveAssemblyReference.cache
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.Form1.resources
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.Properties.Resources.resources
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.csproj.GenerateResource.Cache
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.csproj.CoreCompileInputs.cache
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\bin\Debug\Prototyp.exe.config
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\bin\Debug\Prototyp.exe
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\bin\Debug\Prototyp.pdb
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.exe
+C:\Users\komster\Desktop\Prototyp\SeriousGamesAlcohol-\Prototyp\obj\Debug\Prototyp.pdb

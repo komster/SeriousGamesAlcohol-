@@ -10,7 +10,8 @@ namespace Prototyp
     {
         levelDone,
         blackOut,
-        levelGoing,
+        levelDrinkWalk,
+        levelCar,
         dead,
 
     }

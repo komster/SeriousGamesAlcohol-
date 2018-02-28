@@ -11,24 +11,26 @@ namespace Prototyp
     {
         private RectangleF startRecF;
         private RectangleF recF;
-        private SolidBrush brush;
+
+        private Image image;
 
         private float sizeValue;
 
-        public Drink(SolidBrush solidBrush, float posX, float posY, float size)
+        public Drink(float posX, float posY, float size)
         {
             sizeValue = size;
-            brush = solidBrush;
             recF = new RectangleF(posX - (size / 2), posY - (size / 2), size, size);
             startRecF = recF;
+
+            image = Properties.Resources.beertopview;
         }
         public override RectangleF GetRecF()
         {
             return recF;
         }
-        public override SolidBrush GetBrush()
+        public override Image GetImage()
         {
-            return brush;
+            return image;
         }
         public override void Move(float posX, float posY)
         {

@@ -32,18 +32,7 @@ namespace Prototyp
 
         public override void CreateLevel()
         {
-            CreateTableWithPeople(500, 100, 50);
-            CreateTableWithPeople(330, 80, 50);
-            CreateTableWithPeople(180, 90, 50);
-            CreateTableWithPeople(330, 350, 50);
-            CreateTableWithPeople(130, 380, 50);
-            CreateTableWithPeople(480, 450, 50);
-            CreateTableWithPeople(630, 480, 50);
-            CreateTableWithPeople(620, 240, 50);
-            CreateTableWithPeople(790, 250, 50);
-            CreateTableWithPeople(890, 390, 50);
-            table = new Table(new SolidBrush(Color.Chocolate), 800, 600, 90);
-            drink = new Drink(new SolidBrush(Color.Yellow), 50, 240, 20);
+
             
         }
         public override void SetMouseCord(float x, float y)
@@ -141,14 +130,6 @@ namespace Prototyp
         public override Entity GetTable()
         {
             return table;
-        }
-        public void CreateTableWithPeople(float posX, float posY, float size)
-        {
-            entitys.Add(new Table(new SolidBrush(Color.BurlyWood), posX, posY, size));
-            entitys.Add(new Person(new SolidBrush(Color.Black), posX + size, posY, size / 2));
-            entitys.Add(new Person(new SolidBrush(Color.Black), posX - size, posY, size / 2));
-            entitys.Add(new Person(new SolidBrush(Color.Black), posX, posY + size, size / 2));
-            entitys.Add(new Person(new SolidBrush(Color.Black), posX, posY - size, size / 2));
         }
     }
 }
