@@ -13,7 +13,6 @@ namespace Prototyp
 
         private RectangleF recF;
         private SolidBrush brush;
-
         public Table(SolidBrush solidBrush, float posX, float posY, float size)
         {
             brush = solidBrush;
