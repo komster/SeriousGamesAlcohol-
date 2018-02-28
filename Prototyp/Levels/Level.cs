@@ -13,6 +13,11 @@ namespace Prototyp
 
         }
 
+        public virtual void CreateLevel(int X, int Y)
+        {
+
+        }
+
         public virtual State Update()
         {
             return State.levelGoing;

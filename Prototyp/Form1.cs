@@ -18,7 +18,7 @@ namespace Prototyp
         Graphics formGraphics;
         State state = State.levelGoing;
         List<Level> levelList = new List<Level>();
-        int levelIndex = 0;
+        int levelIndex = 3;
         Level level;
 
         public Form1()
@@ -27,6 +27,7 @@ namespace Prototyp
             levelList.Add(new Level1());
             levelList.Add(new Level2());
             levelList.Add(new Level3());
+            levelList.Add(new Level1Car());
             NextLevel();
             button1.Hide();
         }
