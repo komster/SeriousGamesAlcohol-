@@ -55,18 +55,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Levels\Level.cs" />
-    <Compile Include="Levels\Level1.cs" />
+
     <Compile Include="Levels\CarLevels\Level1Car.cs" />
-    <Compile Include="Levels\Level2.cs" />
-    <Compile Include="Levels\Level3.cs" />
-=======
+
     <Compile Include="Level.cs" />
     <Compile Include="Level1DrinkWalk.cs" />
     <Compile Include="Level2DrinkWalk.cs" />
     <Compile Include="Level3DrinkWalk.cs" />
->>>>>>> 95a80907f70431ce9362deea3c07bfb996abbe8f
+
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,12 +72,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="StateEnum.cs" />
-<<<<<<< HEAD
+    
     <Compile Include="Entities\Table.cs" />
-=======
-    <Compile Include="Table.cs" />
+
     <Compile Include="Vector2.cs" />
->>>>>>> 95a80907f70431ce9362deea3c07bfb996abbe8f
+
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,9 +105,9 @@
     <None Include="picturs\Dead.jpg" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <None Include="Resources\Tetris_Tile.png" />
-=======
+
+    <None Include="Resources\Road.png" />
+
     <None Include="picturs\beertopview.png" />
   </ItemGroup>
   <ItemGroup>
@@ -132,7 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="picturs\table4.png" />
->>>>>>> 95a80907f70431ce9362deea3c07bfb996abbe8f
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
