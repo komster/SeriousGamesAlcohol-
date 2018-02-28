@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="StateEnum.cs" />
     <Compile Include="Table.cs" />
+    <Compile Include="Vector2.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +95,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="picturs\Dead.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\beertopview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\bardesk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\floor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\tablecombo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\tablecombo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\tablecombo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\table4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

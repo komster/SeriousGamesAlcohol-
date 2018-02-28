@@ -68,7 +68,7 @@ namespace Prototyp
                 List<Entity> entitys = level.GetEntityList();
                 for (int index = 0; index < entitys.Count; index++)
                 {
-                    formGraphics.FillRectangle(entitys[index].GetBrush(), entitys[index].GetRecF());
+                    formGraphics.DrawImage(entitys[index].getImage(), entitys[index].GetRecF());
                 }
                 Entity table = level.GetTable();
                 formGraphics.FillRectangle(table.GetBrush(), table.GetRecF());

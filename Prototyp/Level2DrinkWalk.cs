@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Threading;
 
 namespace Prototyp
 {
@@ -16,6 +17,12 @@ namespace Prototyp
         private Entity drink;
         private float mouseX;
         private float mouseY;
+
+        private float lastMouseX;
+        private float lastMouseY;
+
+        private Vector2 movementDirection;
+        private Vector2 wingleDirection;
 
         private bool drinkPicktUp = false;
         private State state = State.levelGoing;
@@ -37,22 +44,37 @@ namespace Prototyp
             CreateTableWithPeople(890, 390, 50);
             table = new Table(new SolidBrush(Color.Chocolate), 800, 600, 90);
             drink = new Drink(new SolidBrush(Color.Yellow), 50, 240, 20);
+            
         }
         public override void SetMouseCord(float x, float y)
         {
+            lastMouseX = mouseX;
+            lastMouseY = mouseY;
+
             mouseX = x;
             mouseY = y;
+
+            if (drinkPicktUp == true)
+            {
+                movementDirection.X = mouseX - lastMouseX;
+                movementDirection.Y = mouseY - lastMouseY;
+
+                //wingleDirection = Vector2.rotateVector(movementDirection, (90 * (float)Math.PI / 180));
+                wingleDirection = movementDirection;
+                //wingleDirection = wingleDirection * 4;
+            }
 
         }
         public override State Update()
         {
             checkCollision();
+            Thread.Sleep(20);
             if (drinkPicktUp == true)
             {
-                drink.Move(mouseX, mouseY + wingle);
                 if (wingleUp == true)
                 {
                     wingle++;
+                    drink.Move(mouseX + (float)wingleDirection.X * wingle, mouseY + (float)wingleDirection.Y * wingle);
                     if (wingle == 30)
                     {
                         wingleUp = false;
@@ -61,6 +83,7 @@ namespace Prototyp
                 if (wingleUp == false)
                 {
                     wingle--;
+                    drink.Move(mouseX + (float)wingleDirection.X * wingle , mouseY + (float)wingleDirection.Y * wingle);
                     if (wingle == -30)
                     {
                         wingleUp = true;
