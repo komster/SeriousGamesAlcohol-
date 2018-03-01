@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Prototyp
 {
-    class Table : Entity
+    class TableWithPersons : Entity
     {
         Random random = new Random();
 
@@ -16,10 +16,11 @@ namespace Prototyp
 
         private Image image;
 
-        public Table(float posX, float posY, float size)
+        public TableWithPersons(float posX, float posY, float size)
         {
-            int value = random.Next(0,3);
-            switch(value)
+            int value = random.Next(0, 3);
+
+            switch (value)
             {
                 case 0:
                     image = Properties.Resources.tablecombo1;

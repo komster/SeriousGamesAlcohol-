@@ -8,24 +8,24 @@ using System.Drawing;
 
 namespace Prototyp
 {
-    class Person : Entity
+    class Bar : Entity
     {
 
         private RectangleF recF;
-        private SolidBrush brush; 
+        private Image image;
 
-        public Person(SolidBrush solidBrush,float posX, float posY, float size)
+        public Bar(float posX, float posY, float sizeX, float sizeY)
         {
-            brush = solidBrush;
-            recF = new RectangleF(posX - (size/2),posY - (size/2),size,size);
+            image = Properties.Resources.bardesk;
+            recF = new RectangleF(posX - (sizeX/2),posY - (sizeY/2),sizeX,sizeY);
         }
         public override RectangleF GetRecF()
         {
             return recF;
         }
-        public override SolidBrush GetBrush()
+        public override Image GetImage()
         {
-            return brush;
+            return image;
         }
     }
 }

@@ -22,7 +22,10 @@ namespace Prototyp
         {
             return State.levelDone;
         }
-
+        public virtual int GetNumbersOfDrinks()
+        {
+            return 0;
+        }
         public virtual List<Entity> GetEntityList()
         {
             return null;
@@ -32,6 +35,10 @@ namespace Prototyp
             return null;
         }
         public virtual Entity GetDrink()
+        {
+            return null;
+        }
+        public virtual Entity GetBar()
         {
             return null;
         }
