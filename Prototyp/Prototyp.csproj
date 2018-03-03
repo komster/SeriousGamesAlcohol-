@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Entities\CarLvlBackground.cs" />
     <Compile Include="Entities\Drink.cs" />
+    <Compile Include="Entities\DrinkWalkMap.cs" />
     <Compile Include="Entities\EmptyTable.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\TableWithPersons.cs" />
@@ -58,6 +59,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Levels\CarLevels\Level1Car.cs" />
+    <Compile Include="Levels\DrinkWalk\LevelDebugDrinkWalk.cs" />
     <Compile Include="Levels\Level.cs" />
     <Compile Include="Levels\DrinkWalk\Level1DrinkWalk.cs" />
     <Compile Include="Levels\DrinkWalk\Level2DrinkWalk.cs" />
@@ -128,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="picturs\beerlifepoints.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picturs\redSquare.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

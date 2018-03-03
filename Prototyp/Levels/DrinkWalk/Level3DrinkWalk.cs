@@ -11,6 +11,7 @@ namespace Prototyp
     class Level3DrinkWalk : Level
     {
         private List<Entity> entitys = new List<Entity>();
+        private List<RectangleF> hitBoxes = new List<RectangleF>();
         private Entity table;
         private Entity drink;
         private Entity bar;
@@ -28,18 +29,14 @@ namespace Prototyp
 
         public override void CreateLevel()
         {
-            bar = new Bar(940, 520, 150, 230);
-            entitys.Add(new TableWithPersons(880, 320, 150));
-            entitys.Add(new TableWithPersons(800, 150, 150));
-            entitys.Add(new TableWithPersons(600, 100, 150));
-            entitys.Add(new TableWithPersons(400, 100, 150));
-            entitys.Add(new TableWithPersons(200, 100, 150));
-            entitys.Add(new TableWithPersons(100, 300, 150));
-            entitys.Add(new TableWithPersons(320, 550, 150));
-            entitys.Add(new TableWithPersons(450, 350, 150));
-            entitys.Add(new TableWithPersons(580, 550, 150));
-            table = new Entities.EmptyTable(100, 550, 150);
-            drink = new Drink(900, 480, 20);
+            entitys = Entities.DrinkWalkMap.createEntitys();
+            bar = Entities.DrinkWalkMap.createBar();
+            table = Entities.DrinkWalkMap.createTable();
+            drink = Entities.DrinkWalkMap.createDrink();
+            for (int index = 0; index < entitys.Count; index++)
+            {
+                hitBoxes.AddRange(entitys[index].GetHitBoxes());
+            }
         }
         public override void SetMouseCord(float x, float y)
         {

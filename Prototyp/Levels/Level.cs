@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Prototyp
 {
@@ -39,6 +40,10 @@ namespace Prototyp
             return null;
         }
         public virtual Entity GetBar()
+        {
+            return null;
+        }
+        public virtual List<RectangleF> getHitBoxes()
         {
             return null;
         }

@@ -11,6 +11,7 @@ namespace Prototyp
         levelDone,
         blackOut,
         levelDrinkWalk,
+        debugDrinkWalk,
         levelCar,
         dead,
 

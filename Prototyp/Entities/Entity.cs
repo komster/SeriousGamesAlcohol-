@@ -30,6 +30,10 @@ namespace Prototyp
         {
             return null;
         }
+        public virtual List<RectangleF> GetHitBoxes()
+        {
+            return null;
+        }
     }
 }
 

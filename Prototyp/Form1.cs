@@ -18,7 +18,7 @@ namespace Prototyp
         Graphics formGraphics;
         State state = State.levelDrinkWalk;
         List<Level> levelList = new List<Level>();
-        int levelIndex = 0;
+        int levelIndex = 1;
         Level level;
         bool firstDraw = true;
         bool showButton = false;
@@ -33,6 +33,7 @@ namespace Prototyp
             this.updateTimer.Interval = Convert.ToDouble(10);
             this.updateTimer.Elapsed += new System.Timers.ElapsedEventHandler(this.UpdateTimer_Tick);
             updateTimer.Enabled = true;
+            levelList.Add(new Levels.DrinkWalk.LevelDebugDrinkWalk());
             levelList.Add(new Level1DrinkWalk());
             levelList.Add(new Level2DrinkWalk());
             levelList.Add(new Level3DrinkWalk());
@@ -90,6 +91,30 @@ namespace Prototyp
             if (state == State.blackOut)
             {
                 formGraphics.Clear(Color.Black);
+            }
+            if (state == State.debugDrinkWalk)
+            {
+                if (firstDraw == true)
+                {
+                    List<Entity> entitys = level.GetEntityList();
+                    for (int index = 0; index < entitys.Count; index++)
+                    {
+                        formGraphics.DrawImage(entitys[index].GetImage(), entitys[index].GetRecF());
+                    }
+
+                    List<RectangleF> hitBoxes = level.getHitBoxes();
+                    for (int index = 0; index < hitBoxes.Count; index++)
+                    {
+                        formGraphics.DrawImage(Properties.Resources.redSquare, hitBoxes[index]);
+                    }
+
+                    Bitmap screenBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                    pictureBox1.DrawToBitmap(screenBitmap, new Rectangle(0, 0, screenBitmap.Width, screenBitmap.Height));
+
+                    pictureBox1.BackgroundImage = screenBitmap;
+
+                    firstDraw = false;
+                }
             }
             if (state == State.levelDrinkWalk)
             {
