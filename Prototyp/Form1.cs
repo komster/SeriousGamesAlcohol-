@@ -18,7 +18,7 @@ namespace Prototyp
         Graphics formGraphics;
         State state = State.levelDrinkWalk;
         List<Level> levelList = new List<Level>();
-        int levelIndex = 1;
+        int levelIndex = 4;
         Level level;
         bool firstDraw = true;
         bool showButton = false;
