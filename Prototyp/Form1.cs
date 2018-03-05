@@ -18,11 +18,11 @@ namespace Prototyp
         Graphics formGraphics;
         State state = State.levelDrinkWalk;
         List<Level> levelList = new List<Level>();
-        int levelIndex = 4;
+        int levelIndex = 1;
         Level level;
         bool firstDraw = true;
         bool showButton = false;
-        private System.Windows.Forms.Timer updateTimer = new System.Windows.Forms.Timer();
+        private System.Timers.Timer updateTimer = new System.Timers.Timer();
 
         int beerSize = 100;
 
@@ -35,10 +35,9 @@ namespace Prototyp
             levelList.Add(new Level3DrinkWalk());
             levelList.Add(new Level1Car());
 
-            updateTimer.Interval = 200;
-            updateTimer.Tick += new EventHandler(UpdateTimer_Tick);
+            updateTimer.Interval = 100;
+            updateTimer.Elapsed += UpdateTimer_Tick;
             updateTimer.Enabled = true;
-            updateTimer.Start();
 
             NextLevel();
             button1.Visible = false;
@@ -69,7 +68,11 @@ namespace Prototyp
                 updateTimer.Stop();
                 showButton = true;
             }
-            Refresh();
+            var reportProgress = new Action(() =>
+            {
+                Refresh();
+            });
+            Invoke(reportProgress);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
