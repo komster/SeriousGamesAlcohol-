@@ -148,10 +148,10 @@
   <data name="beerlifepoints" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\picturs\beerlifepoints.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tablecombo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\picturs\tablecombo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="redSquare" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\picturs\redSquare.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tablecombo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\picturs\tablecombo2 .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

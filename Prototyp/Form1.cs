@@ -22,22 +22,24 @@ namespace Prototyp
         Level level;
         bool firstDraw = true;
         bool showButton = false;
-        private System.Timers.Timer updateTimer = null;
+        private System.Windows.Forms.Timer updateTimer = new System.Windows.Forms.Timer();
 
         int beerSize = 100;
 
         public Form1()
         {
             InitializeComponent();
-            updateTimer = new System.Timers.Timer();
-            this.updateTimer.Interval = Convert.ToDouble(10);
-            this.updateTimer.Elapsed += new System.Timers.ElapsedEventHandler(this.UpdateTimer_Tick);
-            updateTimer.Enabled = true;
             levelList.Add(new Levels.DrinkWalk.LevelDebugDrinkWalk());
             levelList.Add(new Level1DrinkWalk());
             levelList.Add(new Level2DrinkWalk());
             levelList.Add(new Level3DrinkWalk());
             levelList.Add(new Level1Car());
+
+            updateTimer.Interval = 200;
+            updateTimer.Tick += new EventHandler(UpdateTimer_Tick);
+            updateTimer.Enabled = true;
+            updateTimer.Start();
+
             NextLevel();
             button1.Visible = false;
             Refresh();
@@ -67,7 +69,7 @@ namespace Prototyp
                 updateTimer.Stop();
                 showButton = true;
             }
-
+            Refresh();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -160,7 +162,6 @@ namespace Prototyp
             if (state == State.levelDrinkWalk)
             {
                 level.PickUpDrink();
-                Refresh();
             }
 
         }
@@ -170,7 +171,6 @@ namespace Prototyp
             if (state == State.levelDrinkWalk)
             {
                 level.SetMouseCord(e.X, e.Y);
-                Refresh();
             }
 
             Refresh();
