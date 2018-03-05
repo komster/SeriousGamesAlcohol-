@@ -21,19 +21,13 @@ namespace Prototyp.Entities
 
         public CarLvlBackground(float SizeX, float SizeY)
         {
-            //Img = Properties.Resources.Road;
+            Img = Properties.Resources.Road;
 
             PosX = 0;
             PosY = 0;
             SX = SizeX;
             SY = SizeY;
 
-            createNew();
-
-        }
-
-        private void createNew()
-        {
             recF = new RectangleF(PosX, PosY, SX, SY);
         }
 
@@ -52,10 +46,6 @@ namespace Prototyp.Entities
             return Img;
         }
 
-        public float getPosX()
-        {
-            return PosX;
-        }
         public void setPosX(float value)
         {
             PosX = PosX + value;

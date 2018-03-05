@@ -21,7 +21,6 @@ namespace Prototyp
             ScreenHeight = ScreenH;
 
             entitys.Add(new Entities.CarLvlBackground(ScreenWidth, ScreenHeight));
-
         }
 
         public override State Update()
@@ -39,10 +38,8 @@ namespace Prototyp
         {
             foreach (Entities.CarLvlBackground BG in entitys)
             {
-                BG.setPosX(1f);
+                //BG.setPosX(1f);
                 BG.Update();
-                if(BG.getPosX() > -0.1f && BG.getPosX() < 1f) { entitys.Add(new Entities.CarLvlBackground(ScreenWidth, ScreenHeight)); }
-                else if(BG.getPosX() > ScreenWidth) { entitys.Remove(BG); }
             }
         }
     }
