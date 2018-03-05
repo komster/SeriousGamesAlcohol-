@@ -12,6 +12,7 @@ namespace Prototyp
         blackOut,
         levelDrinkWalk,
         levelCar,
+        levelBlur,
         dead,
 
     }

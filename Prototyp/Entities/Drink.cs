@@ -37,6 +37,12 @@ namespace Prototyp
             recF.X = posX - (sizeValue / 2);
             recF.Y = posY - (sizeValue / 2);
         }
+
+        public override void Fall()
+        {
+            recF.Y = recF.Y + 5;
+        }
+
         public override void resetEntity()
         {
             recF = startRecF;

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-/*namespace Prototyp
+namespace Prototyp
 {
 
     //DELETE
@@ -20,19 +20,20 @@ using System.Drawing;
         private Entity drink1;//rename to avoid bugs
         private float mouseX;
         private float mouseY;
-
+        private int screenY;
         
 
-        private State state = State.levelGoing;
+        private State state = State.levelBlur;
 
         private bool drink1PicktUp = false;//rename to avoid bugs
 
-        public override void CreateLevel()
+        public override void CreateLevel(int x, int y)
         {
-
-            table1 = new Table(new SolidBrush(Color.Chocolate), 800, 400, 90);
-            table2 = new Table(new SolidBrush(Color.Chocolate),100, 400, 90 );
-            drink1 = new Drink(new SolidBrush(Color.Yellow), 120, 420, 20);
+            //Change these so that they're visible
+            table1 = new Table(800, 400, 90);
+            table2 = new Table(100, 400, 90 );
+            drink1 = new Drink(120, 420, 20);
+            screenY = y;
         }
 
         public override void SetMouseCord(float x, float y)
@@ -47,8 +48,26 @@ using System.Drawing;
         }
         public override State Update()
         {
-           //create eventual blur here
-           //also cheack if items are on tables and if not drop them on the floor
+            //create eventual blur here
+            //also cheack if items are on tables and if not drop them on the floor
+            if (table1.GetRecF().IntersectsWith(drink1.GetRecF()) == false)
+            {
+                if (table2.GetRecF().IntersectsWith(drink1.GetRecF()) == false)
+                {
+                    if (drink1PicktUp == false)
+                    {
+                        drink1.Fall();
+                    }
+                }
+            }
+
+            if (drink1PicktUp == false)
+            {
+                if (drink1.GetRecF().Y >= screenY)
+                {
+                    state = State.levelDone;
+                }
+            }
             return state;
         }
 
@@ -65,7 +84,7 @@ using System.Drawing;
             if (table1.GetRecF().IntersectsWith(drink1.GetRecF()))
             {
                 drink1PicktUp = false;
-                //state = State.levelDone;
+                state = State.levelDone;
             }
             else
             {
@@ -94,4 +113,3 @@ using System.Drawing;
         }
     }
 }
-*/

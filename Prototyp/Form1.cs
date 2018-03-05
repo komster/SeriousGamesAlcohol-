@@ -16,7 +16,7 @@ namespace Prototyp
     {
         Bitmap drawImage;
         Graphics formGraphics;
-        State state = State.levelCar;
+        State state = State.levelBlur;
         List<Level> levelList = new List<Level>();
         int levelIndex = 3;
         Level level;
@@ -28,7 +28,9 @@ namespace Prototyp
             levelList.Add(new Level1DrinkWalk());
             levelList.Add(new Level2DrinkWalk());
             levelList.Add(new Level3DrinkWalk());
+            levelList.Add(new Level1Blur());
             levelList.Add(new Level1Car());
+            
             NextLevel();
             button1.Hide();
         }
@@ -75,6 +77,22 @@ namespace Prototyp
 
                 Entity table = level.GetTable();
                 formGraphics.DrawImage(table.GetImage(), table.GetRecF());
+                Entity drink = level.GetDrink();
+                formGraphics.DrawImage(drink.GetImage(), drink.GetRecF());
+            }
+
+            if (state == State.levelBlur)
+            {
+                List<Entity> entitys = level.GetEntityList();
+                for (int index = 0; index < entitys.Count; index++)
+                {
+                    formGraphics.DrawImage(entitys[index].GetImage(), entitys[index].GetRecF());
+                }
+
+                Entity table = level.GetTable();
+                formGraphics.DrawImage(table.GetImage(), table.GetRecF());
+                Entity table2 = level.GetTable2();
+                formGraphics.DrawImage(table2.GetImage(), table2.GetRecF());
                 Entity drink = level.GetDrink();
                 formGraphics.DrawImage(drink.GetImage(), drink.GetRecF());
             }

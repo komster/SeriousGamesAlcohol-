@@ -22,6 +22,10 @@ namespace Prototyp
         {
 
         }
+        public virtual void Fall()
+        {
+
+        }
         public virtual void resetEntity()
         {
 

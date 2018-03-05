@@ -31,6 +31,12 @@ namespace Prototyp
         {
             return null;
         }
+
+        public virtual Entity GetTable2()
+        {
+            return null;
+        }
+
         public virtual Entity GetDrink()
         {
             return null;
